@@ -88,7 +88,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ʙᴏss** [🦋𝐒𝐌𝐃_𝐎𝐰𝐧𝐞𝐫🍁](https://t.me/SMD_Owner)",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ʙᴏss** [𝐎𝐰𝐧𝐞𝐫](https://t.me/TVK616)",
                 
                 disable_web_page_preview=True)
             return
