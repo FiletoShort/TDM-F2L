@@ -24,16 +24,16 @@ class Var(object):
     OWNER_USERNAME = str(getenv('OWNER_USERNAME', 'TVK616'))
     if 'DYNO' in environ:
         ON_HEROKU = True
-        APP_NAME = str(getenv('APP_NAME','tdm-filetolink-e1325976a80b'))
+        APP_NAME = str(getenv('APP_NAME',''))
     
     else:
         ON_HEROKU = False
     FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL', True))
     if HAS_SSL:
-        URL = "https://{}/".format(FQDN)
+        URL = "https://tvk.faser23837.workers.dev/".format(FQDN)
     else:
-        URL = "http://{}/".format(FQDN)
+        URL = "https://tvk.faser23837.workers.dev/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Leechbot:$nopassword0$@cluster0.96aznin.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'Team_TDM'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
